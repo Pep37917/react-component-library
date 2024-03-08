@@ -1,0 +1,640 @@
+/*
+   ============
+   fonts
+   ============
+*/
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.4s ease-in-out;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #2e2c2c;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+/*
+   =================
+   Global Classes and Styles
+   =================
+*/
+
+input[type=text] {
+  font-size: 0.9rem;
+}
+
+.main-title {
+  font-size: 1.1rem;
+  color:#ffffff;
+  width: 230px;
+  text-align: start;
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.hovered {
+  box-shadow: 1px 1px 10px #898888;
+}
+
+.focused {
+  background:#2e2c2c;
+  border-radius: 10px;
+}
+
+.blue-bg {
+  background: #4a6ae0;
+}
+
+.blue-text {
+  color: #4a6ae0;
+}
+
+.white-bg {
+  background: #ffffff;
+}
+
+/* ==== Containers ==== */
+
+.library-container {
+  padding: 0.01em 2em;
+}
+
+.header-left,
+.header-right,
+.banner-item,
+.item-container,
+.card-items,
+.testim-items,
+.testim-item-set {
+  display: flex;
+  align-items: center;
+}
+
+.badge-container,
+.banner-container,
+.cards-container {
+  margin-bottom: 4em;
+  align-items: center;
+}
+
+.header {
+  padding-bottom: 0.5em;
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-pages,
+.search-bar {
+  visibility: hidden;
+}
+
+.nav-pages {
+  list-style: none;
+  font-size: 1.2em;
+  align-self: start;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+}
+
+.nav-pages li {
+  font-size: 1em;
+}
+
+.nav-pages li:hover {
+  background: #2e2c2c;
+  cursor: pointer;
+}
+
+.nav-pages li:focus {
+  background:#2e2c2c;
+}
+
+.search-bar {
+  width: 90%;
+  align-self: center;
+  height: 30px;
+  background-color: #6B7280;
+  border-radius: 50px;
+  border: none;
+  padding: 1.1em;
+}
+
+.search-bar::placeholder {
+  font-size: 0.8rem;
+}
+
+.header-left {
+  gap: 0.5em;
+}
+
+.header-left .react-logo {
+  width: 2rem;
+  height: 2rem;
+}
+
+.header-right {
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  color: #ffffff;
+}
+
+.header-right:hover {
+  color:aqua;
+  cursor: pointer;
+}
+
+.comp-title {
+  font-size: 1.1rem;
+  letter-spacing: -0.01em;
+  font-weight: bold;
+  color:#fdfdfd;
+  margin-bottom: 0.4em;
+  text-align: start;
+}
+
+/* ============
+  badge styles 
+   ============
+*/
+.badge-container {
+  padding: 1.5em 0;
+  margin-top: 2em;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: start;
+}
+
+
+.badge {
+  padding: 0.4em 1.4em;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* ============
+  banner styles 
+   ============
+*/
+
+.item-container {
+  gap: 2em;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner-item {
+  text-align: start;
+  gap: 1em;
+  padding: 0.7em;
+  border-radius: 10px;
+  margin-bottom: 1em;
+}
+
+.banner-item .icon {
+  font-size: 1.4rem;
+  margin-top: 0.2em;
+}
+
+.banner-item .title {
+  font-size: 1rem;
+}
+
+.banner-item .desc {
+  font-size: 0.9rem;
+}
+
+/* ============
+  card styles 
+   ============
+*/
+
+.cards-container .comp-title {
+  margin-bottom: 1.4em;
+}
+
+.card-items {
+  gap: 2em;
+  flex-direction: column;;
+}
+
+.card-item {
+  position: relative;
+  background: white;
+  color: #000000;
+  border-radius: 8px;
+  padding: 1.3em;
+  width: 350px
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.6em;
+  margin-top: 1em;
+}
+
+.card-desc {
+  font-size: 0.9rem;
+  color: #6B7280;
+}
+
+.card-icon {
+  position: absolute;
+  top: -1.5em;
+  right: 8.7em;
+  width: 2.5em;
+  background: #3F75FE;
+  padding: 0.5em;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+/* ============
+  testimonial styles 
+   ============
+*/
+
+.testimonials-container .comp-title {
+  margin-bottom: 3em;
+}
+
+/* testim items and imgs */
+
+.testim-items,
+.testim-item-set {
+  flex-direction: column;
+  align-items: center;
+  gap: 3em;
+}
+
+
+
+.rounded-corners {
+  border-radius: 8px;
+}
+
+.testim-item {
+  display: flex;
+  text-align: start;
+  gap: 0.5em;
+  position: relative;
+}
+
+.testim-img {
+  position: absolute;
+}
+
+.testim-img img {
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+/* ==== orientation ==== */
+
+/* div orientation */
+.vertical {
+  flex-direction: column;
+  width: 200px;
+}
+
+.horizontal {
+  flex-direction: row;
+  width: 500px;
+}
+
+/* img for respective divs */
+.ver-img {
+  width: 180px;
+  height: 110px;
+  top: 0.3em;
+  left: 0.65em;
+}
+
+.hor-img {
+  width: 140px;
+  height: 220px;
+  top: -1.9em; 
+  left: 1.1em;
+}
+
+.testim-icon {
+  margin-bottom: -0.5em;
+  font-size: 1.7rem;
+  color: #FFFFFF40;
+
+}
+
+.testim-content {
+  padding: 2em 1em 2em 1em;
+}
+
+/*
+  ============
+  testimonials with pics
+  ============
+*/
+
+/* horizontal content */
+div.horizontal .testim-content {
+  margin-left: 10em;
+}
+
+/* vertical content */
+div.vertical .testim-content {
+  margin-top: 1.5em;
+}
+
+/* === testim header === */
+.testim-header {
+  width: 100%;
+  height: 60px;
+}
+
+/* === testimonials description === */
+.testim-content strong,
+.testim-content p {
+  font-size: 0.6rem;
+}
+
+.testim-content p {
+  margin-top: -0.4em;
+}
+
+.testim-desc {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.testim-content h3 {
+  padding: 0.3em 0 0.25em 0;
+}
+
+/* === citation === */
+
+.cite {
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+}
+
+.cite p {
+  font-size: 0.6rem;
+  font-weight: 600;
+  margin-left: -0.5em;
+}
+
+.cite .slash {
+  font-size: 0.8rem;
+}
+
+.cite .gray-text {
+  color: #6B7280;
+  font-size: 0.6rem;
+  font-weight: 600;
+}
+
+/* =========
+  testimonials without pics
+   =========
+*/
+
+.no-pic {
+  flex-direction: column;
+  align-items: center;
+  color: #000000;
+  padding: 1.5em 0.4em;
+  text-align: center;
+  gap: 1em;
+}
+
+.no-pic .testim-logo {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.no-pic .city-icon {
+  font-size: 1.2rem;
+  margin-right: 0.2em;
+}
+
+div.horizontal.no-pic .testim-desc {
+  padding: 0 7em;
+}
+
+.no-pic.vertical .cite {
+  flex-direction: column;
+  gap: 0;
+}
+
+.no-pic.vertical .testim-desc,
+.no-pic.vertical .cite {
+  align-self: start;
+  text-align: start;
+}
+
+/* margins */
+
+.testim-logo {
+  margin-top: 1em;
+}
+
+.cite {
+  margin-bottom: 1em;
+}
+
+
+/*
+ ==============
+ Media Queries
+ ==============
+*/
+
+@media (min-width: 900px) {
+
+  /* containers */
+  .library-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .components {
+    padding: 0 1em;
+    justify-content: end;
+    margin-left: 19em;
+  }
+
+  /* header */
+  .header {
+    flex-direction: column;
+    position: fixed;
+    width: 280px;
+    height: 100%;
+    padding: 1em;
+    background-color: #5756563c;
+    justify-content: start;
+    gap: 3em;
+  }
+
+  .search-bar {
+    width: 90%;
+    align-self: center;
+    height: 40px;
+    background-color: #6B7280;
+    border-radius: 50px;
+    border: none;
+    padding: 1em;
+  }
+
+  .header-left {
+    align-self: start;
+  }
+
+  .header-right {
+    visibility: hidden;
+  }
+
+  .search-bar,
+  .nav-pages {
+    visibility: visible;
+  }
+
+  .nav-pages {
+    list-style: none;
+    font-size: 1.2em;
+    align-self: start;
+    text-align: start;
+    width: 100%;
+  }
+
+  .nav-pages li {
+    margin-left: 2em;
+  }
+
+  /* titles */
+  .main-title {
+    font-size: 1.1rem;
+  }
+
+  /* banners */
+  .item-container {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  /* cards */
+  .card-items {
+    flex-direction: row;
+    justify-content: center;
+
+  }
+
+  /* testimonials */
+  .testim-items {
+    gap: 2.5em;
+  }
+
+  .testim-item-set {
+    flex-direction: row;
+    gap: 1.5em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .components {
+    padding: 0 6em;
+    margin-left: 20em;
+  }
+
+  /* header */
+  .header {
+    width: 320px;
+  }
+
+  .search-bar {
+    width: 90%;
+    align-self: center;
+    height: 40px;
+    background-color: #6B7280;
+    border-radius: 50px;
+    border: none;
+    padding: 1em;
+  }
+
+  .search-bar::placeholder {
+    font-size: 0.9rem;
+  }
+
+  /*titles */
+
+  .main-title {
+    font-size: 1.2rem;
+  }
+
+  .comp-title {
+    text-align: start;
+  }
+
+  /* badges */
+  
+
+  .badge {
+    font-size: 1rem;
+  }
+
+  /* banners */
+  .item-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+  }
+
+  .banner-item .icon {
+    font-size: 1.2rem;
+    margin-top: 0.2em;
+  }
+  
+  .banner-item .title {
+    font-size: 1rem;
+  }
+  
+  .banner-item .desc {
+    font-size: 0.9rem;
+  }
+
+}
