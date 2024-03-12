@@ -16,7 +16,7 @@ export default function Logo() {
 
     return (
         <div className="header-left" style={open ? navStyle : null}>
-            <img className="react-logo" src="../src/assets/react.svg" style={open ? imgStyle : null} alt="react svg" />
+            <img className="react-logo" src="../pubic/react.svg" style={open ? imgStyle : null} alt="react svg" />
             {
                 !open 
                 &&
