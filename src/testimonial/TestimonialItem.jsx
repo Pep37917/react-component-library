@@ -17,7 +17,7 @@ export default function TestimonialItem({containsPic, orientation}) {
                     ? "testim-img hor-img"
                     : "testim-img ver-img"
                 }>
-                    <img src="/mayandersons.jpg" alt="may-andersons" />
+                    <img src="./mayandersons.jpg" alt="may-andersons" />
                 </div>
                 
                 {/* vertical white header */}
